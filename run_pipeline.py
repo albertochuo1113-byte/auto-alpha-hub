@@ -43,3 +43,11 @@ with open(filename, "w", encoding="utf-8") as f:
     f.write(article_content)
 
 print(f"SUCCESS: Article generated -> {filename}")
+
+# 自動編譯與推送到外網
+os.system("python3 ~/.hermes/auto_seo_engine/build_site.py")
+os.system("cd ~/.hermes/auto_seo_engine && git add . && git commit -m 'auto: daily publish' && git push origin main")
+
+# 自動編譯與推送到外網
+os.system("python3 ~/.hermes/auto_seo_engine/build_site.py")
+os.system("cd ~/.hermes/auto_seo_engine && git add . && git commit -m 'auto: daily publish' && git push origin main")
